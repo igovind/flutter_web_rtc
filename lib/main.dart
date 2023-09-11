@@ -7,6 +7,7 @@ import 'package:webrtc_tutorial/signaling.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
+    // name: 'webRTC',
     options: FirebaseOptions(
       apiKey: "AIzaSyBYfuxD81Zhpp1NuweX17xMCvLaAA_linA",
       appId: "1:399686288318:web:aa28ee93691ea7a6e8efef",
