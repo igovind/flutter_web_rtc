@@ -1,11 +1,19 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_webrtc/flutter_webrtc.dart';
+import 'package:webrtc_tutorial/auth_screen.dart';
 import 'package:webrtc_tutorial/signaling.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyBYfuxD81Zhpp1NuweX17xMCvLaAA_linA",
+      appId: "1:399686288318:web:aa28ee93691ea7a6e8efef",
+      messagingSenderId: "399686288318",
+      projectId: "webrtc-bb3c6",
+    ),
+  );
   runApp(MyApp());
 }
 
@@ -18,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: AuthScreen(),
     );
   }
 }
